@@ -6,29 +6,81 @@
     <title>Registro</title>
     <link rel="stylesheet" href="static/css/login.css">
 </head>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Poppins);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Establecer la imagen de fondo del cuerpo */
+  background-image: url('/static/css/img/hola.png'); /* Reemplaza 'ruta/de/la/imagen.jpg' por la URL de tu imagen */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir la pantalla */
+  background-position: center; /* Centra la imagen */
+}
+
+.imagen_logo {
+    max-width: 200%; /* Ajusta la anchura máxima de la imagen */
+    height: 90px; /* Permite que la altura se ajuste proporcionalmente a la anchura */
+    width: 300px;
+}
+
+.container {
+  width: 500px; /* Tamaño del contenedor */
+  border-radius: 4px;
+  padding: 20px;
+  background: rgba(250, 250, 250, 0.7); /* Color de fondo de respaldo con transparencia */
+  border: 1px solid #ebebeb;
+  color: black !important;
+  box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.09804) 0px 1px 2px 0px;
+  
+}
+.centrado{
+    align-items: center;
+    justify-content: center;
+}
+
+</style>
 <body>
 
 <div class="container">
-    <center><img class="imagen_logo" src="img/Logo_Combita.png" alt="Logo"></center>
-    <div class="heading-container">
-        <h2>Inicio de sesión</h2>
-    </div>
-    <form method="POST" enctype="multipart/form-data">
-        <div class="group">
-            <label for="nombre">Correo electronico</label>
-            <input type="text" class="login-input" id="email" name="email" required>
+    <center><img class="imagen_logo" src="/static/css/img/Logo_Combita.png" alt="Logo"></center>
+    <div class="centrado">
+
+        <div class="heading-container">
+            <h2>Inicio de sesión</h2>
         </div>
-        <div class="group">
-          <label for="contrasena">Contraseña:</label>
-          <input type="password" class="login-input" id="password" name="password" required>
-      </div>
 
-      <button type="submit" class="btn">Registrarse</button>
-      <br>
-      '<center><a href="trabajador/registro" class="enlace">No estás registrado?</a></center>'
+        <form method="POST" enctype="multipart/form-data">
+            <div class="group">
+                <label for="nombre">Correo electronico</label>
+                <input type="text" class="login-input" id="email" name="email" required>
+            </div>
+            <div class="group">
+              <label for="contrasena">Contraseña:</label>
+              <input type="password" class="login-input" id="password" name="password" required>
+          </div>
+    
+          <button type="submit" class="btn">Registrarse</button>
+          <br>
+          '<center><a href="trabajador/registro" class="enlace">No estás registrado?</a></center>'
+    
+      </form>
 
-  </form>
+    </div>
+    
+
+    
 </div>
 
 </body>
 </html>
+

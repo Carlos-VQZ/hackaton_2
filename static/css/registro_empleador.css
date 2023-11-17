@@ -15,7 +15,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-image: url('/static/css/img/hola.png');
     margin: 0;
     padding: 0;
     box-sizing: border-box;

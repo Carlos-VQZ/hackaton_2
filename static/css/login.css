@@ -8,12 +8,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #f8f9fa;
   display: flex;
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  height: 100vh; /* Ajusta el alto de la pantalla completa */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
 
 .imagen_logo {
     max-width: 200%; /* Ajusta la anchura máxima de la imagen */
@@ -36,38 +36,44 @@ body {
 }
 
 .login-input {
-    font-size: 14px;
-    width: calc(100% - 16px);
-    border: 1px solid #ced4da;
-    font-family: inherit;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 4px;
-  }
-  
-  .btn {
-    width: calc(100% - 16px);
-    padding: 8px 0px;
-    background: #404969;
-    cursor: pointer;
-    font-size: 14px;
-    color: #fff;
-    border: none;
-    font-weight: 600;
-    border-radius: 4px;
-  }
-  
-  .heading-container {
-    text-align: center;
-    margin-bottom: 30px;
-    padding: 0;
-  }
-  
-  .heading-container > * {
-    margin: 0;
-    padding: 5px;
-  }
-  
-  .enlace {
-    color: black;
-  }  
+  font-size: 14px;
+  width: calc(100% - 16px);
+  border: 1px solid #ced4da;
+  font-family: inherit;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+.btn {
+  width: calc(100% - 16px);
+  padding: 8px 0px;
+  background: #404969;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.heading-container {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.heading-container > * {
+  margin: 0;
+  padding: 5px;
+}
+
+.enlace {
+  color: black;
+}
+
+.centrado{
+
+  justify-content: center;
+
+}

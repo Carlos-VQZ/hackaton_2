@@ -2,78 +2,93 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
-  <link rel="stylesheet" href="/static/css/home_migrante.css">
-  <style>
-    /* Estilos para los cubos y los textos debajo */
-    .cube-container {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 20px;
-    }
-    .cube {
-      position: relative;
-      width: 150px;
-      height: 150px;
-      background-color: #3498db;
-      margin: 10px;
-      text-align: center;
-      line-height: 150px;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .cube-text {
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: 14px;
-      color: #ffffff;
-    }
-  </style>
+  <title>Página con Header, Búsqueda y Contenido</title>
+    <link rel="stylesheet" href="static/css/homem_migrante.css">
 </head>
 <body>
-
   <header>
-    <nav>
-      <ul>
-        <li><a href="#">Botón 1</a></li>
-        <li><a href="#">Botón 2</a></li>
-        <li><a href="#">Botón 3</a></li>
-      </ul>
-    </nav>
+    <a href="#" class="profile-btn">Perfil</a>
+    <div class="header-options">
+      <a href="#">Opción 1</a>
+      <a href="#">Opción 2</a>
+      <a href="#">Opción 3</a>
+    </div>
   </header>
 
-  <div class="search-bar">
-    <input type="text" placeholder="Buscar..." class="search-input">
-  </div>
+  <!-- Contenido -->
+<div>
+<center>
+  <h1>Trabajos Disponibles</h1>
+  <input type="text" class="search-bar" placeholder="Buscar...">
+</center>
+</div>
+  <div class="grid-container">
+    <!-- Ejemplo de contenido -->
+    <div class="grid-item">
+      <img src="img/imagen1.jpg" alt="Imagen 1">
+      <div class="info">
+        <h2>Ingeniero</h2>
+        <p>Descripción del contenido aquí...</p>
+      </div>
+      <button class="accept-btn">Me interesa</button>
+    </div>
+    
+    <div class="grid-item">
+      <img src="img/imagen2.jpg" alt="Imagen 2">
+      <div class="info">
+        <h2>Arquitecto de Software</h2>
+        <p>Descripción del contenido aquí...</p>
+      </div>
+      <button class="accept-btn">Me interesa</button>
+    </div>
 
-  <div class="cube-container">
-    <button>
-      <div class="cube">
-        1
-        <div class="cube-text">Texto 1</div>
+    <div class="grid-item">
+      <img src="img/imagen3.jpg" alt="Imagen 3">
+      <div class="info">
+        <h2>Repartidor</h2>
+        <p>Descripción del contenido aquí...</p>
       </div>
-      <p>Comentario 1</p>
-    </button>
-    <button>
-      <div class="cube">
-        2
-        <div class="cube-text">Texto 2</div>
+      <button class="accept-btn">Me interesa</button>
+    </div>
+
+    <div class="grid-item">
+      <img src="img/imagen4.jpg" alt="Imagen 4">
+      <div class="info">
+        <h2>Albañil</h2>
+        <p>Descripción del contenido aquí...</p>
       </div>
-      <p>Comentario 2</p>
-    </button>
-    <button>
-      <div class="cube">
-        3
-        <div class="cube-text">Texto 3</div>
+      <button class="accept-btn">Me interesa</button>
+    </div>
+
+
+    <div class="grid-item">
+      <img src="img/imagen5" alt="Imagen 5">
+      <div class="info">
+        <h2>Título del contenido 2</h2>
+        <p>Descripción del contenido aquí...</p>
       </div>
-      <p>Comentario 3</p>
-    </button>
+      <button class="accept-btn">Me interesa</button>
+    </div>
+
+
+    <div class="grid-item">
+      <img src="img/imagen6" alt="Imagen 6">
+      <div class="info">
+        <h2>Título del contenido 2</h2>
+        <p>Descripción del contenido aquí...</p>
+      </div>
+      <button class="accept-btn">Me interesa</button>
+    </div>
+
+    <div class="grid-item">
+      <img src="img/imagen7" alt="Imagen 7">
+      <div class="info">
+        <h2>Título del contenido 2</h2>
+        <p>Descripción del contenido aquí...</p>
+      </div>
+      <button class="accept-btn">Me interesa</button>
+    </div>
+
   </div>
 
 </body>

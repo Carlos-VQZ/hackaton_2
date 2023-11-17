@@ -1,7 +1,7 @@
 .imagen_logo {
     max-width: 100%; /* Ajusta la anchura máxima de la imagen */
-    height: 150px; /* Permite que la altura se ajuste proporcionalmente a la anchura */
-    width: 500px;
+    height: 100px; /* Permite que la altura se ajuste proporcionalmente a la anchura */
+    width: 400px;
 }
 
 .container {
@@ -15,7 +15,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-image: url('/static/css/img/hola.png');
     margin: 0;
     padding: 0;
     box-sizing: border-box;
