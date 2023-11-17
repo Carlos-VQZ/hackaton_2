@@ -21,23 +21,26 @@ class Login:
             auth = firebase.auth() 
             db = firebase.database()
             formulario = web.input() 
-            email = formulario.email 
-            password = formulario.password
+            email = formulario['email']
+            password = formulario['password']
             user = auth.sign_in_with_email_and_password(email, password) 
             tokens = user["idToken"]
             local_id = user['localId']
             web.setcookie('localid', local_id)
             web.setcookie('tokenUser', tokens) 
 
-            # Aquí se puede agregar la lógica para redirigir según el tipo de usuario (empleador o migrante)
-            if  vce(local_id):
-                return web.seeother("/empleador/dashboard")
-            elif vcm(local_id):
-                return web.seeother("/migrante/dashboard")
+            busqueda = db.child("data").child("usuarios").child(user['localId']).get()
+
+            if busqueda.val() and busqueda.val().get('nivel') == 'empleador':
+                return web.seeother("/empleador/home_empleador")
+            elif busqueda.val() and busqueda.val().get('nivel') == "migrante":
+                # Si el usuario es un migrante, redirige a la página de inicio de migrante
+                return web.seeother("/migrante/home_migrante")
             else:
-                # Si no es ni empleador ni migrante, redirecciona a una página por defecto o muestra un mensaje de error
-                return render.error_page("No tiene acceso como empleador ni como migrante.")
-         
+                # Si el nivel no coincide con ninguno, el usuario no está autorizado o es inactivo.
+                mensaje = "Acceso no autorizado o usuario inactivo"
+                return render.login(mensaje)
+                    
         except Exception as error:
             formato = json.loads(error.args[1])
             error = formato['error']
@@ -48,6 +51,6 @@ class Login:
             elif mensaje == "INVALID_PASSWORD":
                 mensaje = "Contraseña incorrecta"
             
-            return render.login()
+            return render.login(mensaje)
 
 

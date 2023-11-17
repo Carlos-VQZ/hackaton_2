@@ -69,7 +69,8 @@ label {
 #nombre,
 #telefono,
 #direccion,
-#contrasena {
+#contrasena 
+{
     width: calc(100% - 8px);
     border: 2px solid #404969; /* Añade un borde de 2px de ancho */
     margin: 0 auto; /* Centra los campos de texto */

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/css/home_migrante.css">
+  <style>
+    /* Estilos para los cubos y los textos debajo */
+    .cube-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+    .cube {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background-color: #3498db;
+      margin: 10px;
+      text-align: center;
+      line-height: 150px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .cube-text {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 14px;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Botón 1</a></li>
+        <li><a href="#">Botón 2</a></li>
+        <li><a href="#">Botón 3</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar..." class="search-input">
+  </div>
+
+  <div class="cube-container">
+    <button>
+      <div class="cube">
+        1
+        <div class="cube-text">Texto 1</div>
+      </div>
+      <p>Comentario 1</p>
+    </button>
+    <button>
+      <div class="cube">
+        2
+        <div class="cube-text">Texto 2</div>
+      </div>
+      <p>Comentario 2</p>
+    </button>
+    <button>
+      <div class="cube">
+        3
+        <div class="cube-text">Texto 3</div>
+      </div>
+      <p>Comentario 3</p>
+    </button>
+  </div>
+
+</body>
+</html>
