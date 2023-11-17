@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar empleo</title>
+    <link rel="stylesheet" href="/static/css/home_empleador.css">
+</head>
+<body>
+    <style>
+        .imagen_logo {
+          max-width: 100%; /* Ajusta la anchura máxima de la imagen */
+          height: 30px; /* Permite que la altura se ajuste proporcionalmente a la anchura */
+          width: 100px;
+      }
+      .search-container {
+             max-width: 50%;
+      
+                  display: flex;
+                  align-items: center;
+                  margin: 10px;
+                  padding: 10px;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                  background-color: #f2f2f2;
+              }
+      
+      .search-input {
+                  flex: 1;
+                  padding: 10px;
+                  border: none;
+                  border-radius: 5px;
+                  background-color: #f2f2f2;
+                  font-size: 16px;
+            width: 60px;
+              }
+      
+              /* Estilos para el botón de búsqueda */
+              .search-button {
+                  padding: 10px;
+                  border: none;
+                  border-radius: 5px;
+                  background-color: #4CAF50;
+                  color: white;
+                  font-size: 16px;
+                  cursor: pointer;
+              }
+      
+      </style>
+
+<header>
+    <center><img class="imagen_logo" src="/static/img/Logo_Combita.png" alt="Logo"></center>
+    <div class="header-options">
+      <a href="#">Capacitaciones</a>
+      <a href="#">Notificaciones</a>
+      <a href="#">Perfil</a>
+    </div>
+  </header>
+</body>
+
+<div class="container">
+    <center><img class="imagen_logo" src="/static/img/Logo_Combita.png" alt="Logo"></center>
+    <hr>
+    <h1>Registro de Empleo</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="tipo">Tipo de empleo:</label>
+                <select class="form-control" id="Tipo" name="Tipo" required>
+                    <option value="?">?</option>
+                    <option value="?">?</option>
+                    <option value="?">?</option>
+                    <option value="?">?</option>
+                    <option value="?">?</option>
+                </select>
+            </div>
+            
+            <div class="form-group col-md-6">
+                <label for="apellido">Descripcion:</label>
+                <input type="text" class="form-control" id="Descripcion" name="Descripcion" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="direccion">Paga:</label>
+            <input type="text" class="form-control" id="Paga" name="Paga" required>
+        </div>
+
+        <div class="form-group">
+            <label for="foto">Subir Foto:</label>
+            <input type="file" class="form-control" id="foto" name="foto">
+        </div>
+
+        <button type="submit">Registrar</button>
+    </form>
+</div>
+</html>

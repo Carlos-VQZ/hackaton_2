@@ -1,49 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
-    <link rel="stylesheet" href="/static/css/home_empleador.css">
+    <title>Página con Header, Búsqueda y Contenido</title>
+    <link rel="stylesheet" href="/static/css/home_migrante.css">
 </head>
+<style>
+
+</style>
+
 <body>
-    <div class="container">
-        <center><img class="imagen_logo" src="/static/css/img/Logo_Combita.png" alt="Logo"></center>
-        <hr>
-        <h1>Registro de Empleo</h1>
+    <header>
+        <center><img class="imagen_logo" src="/static/img/Logo_Combita.png" alt="Logo"></center>
+        <div class="header-options">
+            <a href="/mvc/views/empleador/home_empleador.html">Registrar Empleo</a>
+            <!-- Botón de notificaciones utilizando Bootstrap -->
+            
+            <a href="/mvc/views/empleador/notificacion.html">Notificaciones</a>
 
-        <form method="POST" enctype="multipart/form-data">
+            <a href="../">Salir</a>
+        </div>
+    </header>
 
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="tipo">Tipo de empleo:</label>
-                    <select class="form-control" id="Tipo" name="Tipo" required>
-                        <option value="?">?</option>
-                        <option value="?">?</option>
-                        <option value="?">?</option>
-                        <option value="?">?</option>
-                        <option value="?">?</option>
-                    </select>
-                </div>
-                
-                <div class="form-group col-md-6">
-                    <label for="apellido">Descripcion:</label>
-                    <input type="text" class="form-control" id="Descripcion" name="Descripcion" required>
-                </div>
-            </div>
+    <!-- Contenido -->
+    <div>
+        <center>
+            <h1>Registro de Empleo</h1>
 
-            <div class="form-group">
-                <label for="direccion">Paga:</label>
-                <input type="text" class="form-control" id="Paga" name="Paga" required>
-            </div>
-
-            <div class="form-group">
-                <label for="foto">Subir Foto:</label>
-                <input type="file" class="form-control" id="foto" name="foto">
-            </div>
-
-            <button type="submit">Registrar</button>
-        </form>
+        </center>
     </div>
+    <div class="grid-container">
+        <!-- Ejemplo de contenido -->
+        <div class="grid-item">
+
+            <div class="container">
+                <center><img class="imagen_logo" src="/static/img/Logo_Combita.png" alt="Logo"></center>
+                <hr>
+
+
+                <form method="POST" enctype="multipart/form-data">
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="tipo">Tipo de empleo:</label>
+                            <select class="form-control" id="Tipo" name="Tipo" required>
+                                <option value="?">Carpinteria</option>
+                                <option value="?">Domestico</option>
+                                <option value="?">Plomeria</option>
+                                <option value="?">Albañileria</option>
+                                <option value="?">Limpieza</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="apellido">Descripcion:</label>
+                            <input type="text" class="form-control" id="Descripcion" name="Descripcion" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Paga:</label>
+                        <input type="text" class="form-control" id="Paga" name="Paga" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foto">Subir Foto:</label>
+                        <input type="file" class="form-control" id="foto" name="foto">
+                    </div>
+
+                    <button class="btn" type="submit">Registrar</button>
+                    
+                </form>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    </div>
+    
+
 </body>
+
 </html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Poppins);
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/img/hola.png');
+            background-size: cover;
+            /* Ajusta la imagen de fondo para cubrir toda la pantalla */
+            background-position: center;
+            /* Centra la imagen de fondo */
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('img/fondo_mitad.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        nav {
+            background-color: #bde3f3;
+            color: #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #dc562a;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+
+        }
+
+        input {
+            font-size: 16px;
+            width: calc(100% - 24px);
+            border: 1px solid #ced4da;
+            font-family: inherit;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+        }
+
+        textarea {
+            font-size: 16px;
+            width: calc(100% - 24px);
+            border: 1px solid #ced4da;
+            font-family: inherit;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+        }
+
+
+
+
+        #logo img {
+            width: 90px;
+            /* Ajusta el tamaño del logo según sea necesario */
+            margin-right: 10px;
+        }
+
+        #profile-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(250, 250, 250, 0.7);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #profile-image {
+            margin-top: 10%;
+            float: left;
+            margin-right: 20px;
+        }
+
+        #profile-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        #profile-info {
+            overflow: hidden;
+        }
+
+        #profile-info label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #profile-info input {
+            margin-bottom: 10px;
+            width: 90%;
+            padding: 5px;
+        }
+
+        #profile-description {
+            clear: both;
+            margin-top: 50px;
+        }
+
+        #pdf-preview {
+            width: 50%;
+            height: 80px;
+            border: 1px solid #ccc;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div id="logo">
+            <img src="/static/img/Logo_Combita.png" alt="Logo">
+
+        </div>
+
+        <div>
+            <a href="/mvc/views/empleador/capacitador.html"><i class="fas fa-chalkboard-teacher"></i> Capacitación</a>
+            <a href="/mvc/views/empleador/perfil.html"><i class="fas fa-user"></i> Perfil</a>
+            <a href="/mvc/views/empleador/notificacion.html"><i class="fas fa-bell"></i> Notificaciones</a>
+
+        </div>
+
+    </nav>
+
+    <div id="profile-container">
+        <div id="profile-image">
+            <img src="/static/img/OIP.jpeg" alt="Foto de perfil">
+        </div>
+        <div id="profile-info">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Nombre">
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" placeholder="Apellidos">
+
+            <label for="contacto">Contacto:</label>
+            <input type="text" id="contacto" placeholder="Contacto">
+
+            <label for="nacionalidad">Nacionalidad:</label>
+            <input type="text" id="nacionalidad" placeholder="Nacionalidad">
+
+            <label for="fecha-nacimiento">Fecha de Nacimiento:</label>
+            <input type="text" id="fecha-nacimiento" placeholder="Fecha de Nacimiento">
+        </div>
+        <div id="pdf-preview">
+            <embed src="ejemplo.pdf" type="application/pdf" width="100%" height="100%">
+        </div>
+        <div id="profile-description">
+            <h3>MI DESCRIPCIÓN</h3>
+            <textarea placeholder="Agrega información adicional sobre ti."></textarea>
+        </div>
+    </div>
+
+</body>
+
+</html>

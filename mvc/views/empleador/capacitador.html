@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Página con Header, Búsqueda y Contenido</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('/static/img/hola.png');
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header-options {
+      display: flex;
+      align-items: center;
+    }
+    .header-options a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+    .search-bar {
+      margin: 20px;
+    }
+    .grid-container {
+      display: flex;
+      overflow-x: auto; /* Permite el desplazamiento horizontal */
+      gap: 20px;
+      padding: 20px;
+    }
+    .grid-item {
+      flex: 0 0 auto;
+      width: 300px; /* Ancho de cada video o elemento */
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+    .profile-btn {
+      margin-right: 20px;
+      background-color: #428bca;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    #Btitle{
+      padding-left: 50%;
+      font-family: 'gidole', sans-serif; /* Aplicando la fuente gidole */
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="/mvc/views/empleador/perfil.html" class="profile-btn">Perfil</a>
+    <div class="header-options">
+      <a href="#">Opción 1</a>
+      <a href="#">Opción 2</a>
+      <a href="#">Opción 3</a>
+    </div>
+      
+  </header>
+
+  <!-- Contenido -->
+  <div><input type="text" class="search-bar" placeholder="Buscar..."></div>
+  <div class="Btitle"><H1>Capacitaciones</H1></div>
+  <div class="grid-container">
+    <!-- Ejemplo de contenido -->
+    <div class="grid-item">
+      <h2>Título del video o información</h2>
+      <p>Descripción o detalles del contenido</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Puedes agregar más elementos .grid-item con información y videos -->
+    
+    <div class="grid-item">
+      <h2>Otro título</h2>
+      <p>Otra descripción</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Agregamos más elementos para demostrar el scroll horizontal -->
+    <div class="grid-item">
+      <h2>Título del video 3</h2>
+      <p>Descripción del video 3</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="grid-item">
+      <h2>Título del video 4</h2>
+      <p>Descripción del video 4</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="grid-item">
+      <h2>Título del video 5</h2>
+      <p>Descripción del video 5</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div>
+  <div class="grid-container">
+    <!-- Ejemplo de contenido -->
+    <div class="grid-item">
+      <h2>Título del video o información</h2>
+      <p>Descripción o detalles del contenido</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+    <!-- Puedes agregar más elementos .grid-item con información y videos -->
+    
+    <div class="grid-item">
+      <h2>Otro título</h2>
+      <p>Otra descripción</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Agregamos más elementos para demostrar el scroll horizontal -->
+    <div class="grid-item">
+      <h2>Título del video 3</h2>
+      <p>Descripción del video 3</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="grid-item">
+      <h2>Título del video 4</h2>
+      <p>Descripción del video 4</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="grid-item">
+      <h2>Título del video 5</h2>
+      <p>Descripción del video 5</p>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</body>
+</html>

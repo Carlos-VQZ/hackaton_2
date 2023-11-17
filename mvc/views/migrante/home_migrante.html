@@ -3,15 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Página con Header, Búsqueda y Contenido</title>
-    <link rel="stylesheet" href="static/css/homem_migrante.css">
+    <link rel="stylesheet" href="/static/css/home_migrante.css">
 </head>
+<style>
+  .imagen_logo {
+    max-width: 100%; /* Ajusta la anchura máxima de la imagen */
+    height: 30px; /* Permite que la altura se ajuste proporcionalmente a la anchura */
+    width: 100px;
+}
+.search-container {
+       max-width: 50%;
+
+			display: flex;
+			align-items: center;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #f2f2f2;
+		}
+
+.search-input {
+			flex: 1;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			font-size: 16px;
+      width: 60px;
+		}
+
+		/* Estilos para el botón de búsqueda */
+		.search-button {
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #4CAF50;
+			color: white;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+</style>
 <body>
   <header>
-    <a href="#" class="profile-btn">Perfil</a>
+    <center><img class="imagen_logo" src="/static/img/Logo_Combita.png" alt="Logo"></center>
     <div class="header-options">
-      <a href="#">Opción 1</a>
-      <a href="#">Opción 2</a>
-      <a href="#">Opción 3</a>
+      <a href="/empleador/capacitador/">Capacitaciones</a>
+      <a href="/empleador/notificacion/">Notificaciones</a>
+      <a href="../">Salir</a>
     </div>
   </header>
 
@@ -19,76 +59,68 @@
 <div>
 <center>
   <h1>Trabajos Disponibles</h1>
-  <input type="text" class="search-bar" placeholder="Buscar...">
+  <div class="search-container">
+		<!-- Campo de búsqueda -->
+		<input type="text" placeholder="Buscar..." class="search-input">
+
+		<!-- Botón de búsqueda -->
+		<button type="submit" class="search-button">Buscar</button>
+
+		
+	</div>
 </center>
 </div>
   <div class="grid-container">
     <!-- Ejemplo de contenido -->
     <div class="grid-item">
-      <img src="img/imagen1.jpg" alt="Imagen 1">
+      <img src="/static/img/OIP.jpeg" alt="Imagen 1">
       <div class="info">
-        <h2>Ingeniero</h2>
-        <p>Descripción del contenido aquí...</p>
+        <h2>Plomeria</h2>
+        <p>Destapar el baño</p>
+        <p>Jose Perez</p>
+        <p>$300</p>
       </div>
       <button class="accept-btn">Me interesa</button>
     </div>
     
     <div class="grid-item">
-      <img src="img/imagen2.jpg" alt="Imagen 2">
+      <img src="/static/img/R.png" alt="Imagen 2">
       <div class="info">
-        <h2>Arquitecto de Software</h2>
-        <p>Descripción del contenido aquí...</p>
+        <h2>Albañileria</h2>
+        <p>Colado</p>
+        <p>Alberto Garcia</p>
+        <p>$400</p>
       </div>
       <button class="accept-btn">Me interesa</button>
     </div>
 
     <div class="grid-item">
-      <img src="img/imagen3.jpg" alt="Imagen 3">
+      <img src="/static/img/DOMESTICO.jpg" alt="Imagen 3">
       <div class="info">
-        <h2>Repartidor</h2>
-        <p>Descripción del contenido aquí...</p>
+        <h2>Domestico</h2>
+        <p>lavar ropa</p>
+        <p>Maria Leticia</p>
+        <p>$250</p>
       </div>
       <button class="accept-btn">Me interesa</button>
     </div>
 
     <div class="grid-item">
-      <img src="img/imagen4.jpg" alt="Imagen 4">
+      <img src="/static/img/c.jpeg" alt="Imagen 4">
       <div class="info">
-        <h2>Albañil</h2>
-        <p>Descripción del contenido aquí...</p>
+        <h2>Carpinteria</h2>
+        <p>Muebles</p>
+        <p>Monica Hernandez</p>
+        <p>$450</p>
       </div>
       <button class="accept-btn">Me interesa</button>
     </div>
 
 
-    <div class="grid-item">
-      <img src="img/imagen5" alt="Imagen 5">
-      <div class="info">
-        <h2>Título del contenido 2</h2>
-        <p>Descripción del contenido aquí...</p>
-      </div>
-      <button class="accept-btn">Me interesa</button>
-    </div>
 
 
-    <div class="grid-item">
-      <img src="img/imagen6" alt="Imagen 6">
-      <div class="info">
-        <h2>Título del contenido 2</h2>
-        <p>Descripción del contenido aquí...</p>
-      </div>
-      <button class="accept-btn">Me interesa</button>
-    </div>
 
-    <div class="grid-item">
-      <img src="img/imagen7" alt="Imagen 7">
-      <div class="info">
-        <h2>Título del contenido 2</h2>
-        <p>Descripción del contenido aquí...</p>
-      </div>
-      <button class="accept-btn">Me interesa</button>
-    </div>
-
+  
   </div>
 
 </body>

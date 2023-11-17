@@ -8,6 +8,12 @@ urls = (
     '/migrante/registro_migrante', 'mvc.controllers.migrante.registro_migrante.Registro_migrante',
     '/empleador/home_empleador', 'mvc.controllers.empleador.home_empleador.Home_empleador',
     '/migrante/home_migrante', 'mvc.controllers.migrante.home_migrante.Home_migrante',
+    '/empleador/capacitador/','mvc.controllers.empleador.capacitador.Capacitador',
+    '/empleador/notificacion/','mvc.controllers.empleador.notificacion.Notificacion',
+    
+   
+
+    
 
     
 )
