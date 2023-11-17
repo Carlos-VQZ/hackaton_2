@@ -1,0 +1,94 @@
+.imagen_logo {
+    max-width: 100%; /* Ajusta la anchura máxima de la imagen */
+    height: 150px; /* Permite que la altura se ajuste proporcionalmente a la anchura */
+    width: 500px;
+}
+
+.container {
+    max-width: 1000px; /* Ajusta el ancho del contenedor según tus necesidades */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Añade margen superior para separar del borde superior */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Cambia height por min-height */
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 120%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    border: 2px solid #404969; /* Añade un borde de 2px de ancho */
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna para centrar en una sola columna */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo específico para los nombres de los campos */
+.form-group label {
+    text-align: left;
+}
+
+#correo,
+#apellido,
+#nombre,
+#telefono,
+#direccion,
+#contrasena {
+    width: calc(100% - 8px);
+    border: 2px solid #404969; /* Añade un borde de 2px de ancho */
+    margin: 0 auto; /* Centra los campos de texto */
+}
+
+button {
+    display: block;
+    width: 50%; /* Cambia el porcentaje según tus necesidades */
+    margin: 0 auto; /* Centra el botón */
+    padding: 10px;
+    background-color: #404969;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+button:hover {
+    background-color: #bde3f3;
+}

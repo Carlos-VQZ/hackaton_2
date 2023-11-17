@@ -1,5 +1,4 @@
 import web
-import app
 import json
 import firebase_config as token
 import pyrebase
@@ -7,66 +6,48 @@ from datetime import datetime
 
 render = web.template.render("mvc/views/public/")
 
-class Login: #clase Index
-    def GET (self): 
-        try:  
-            mensaje = None 
-            return render.login(mensaje)
-        except Exception as error: # error
-            mensaje = None
+class Login:
+    def GET(self):
+        try:
+            return render.login()
+        except Exception as error:     
             print("Error Login.GET: {}".format(error))
-            return render.login(mensaje) 
+            return render.login() 
         
-    def POST(self): 
-        try: 
-            mensaje = None
+    def POST(self):
+        try:
+            
             firebase = pyrebase.initialize_app(token.firebaseConfig) 
             auth = firebase.auth() 
             db = firebase.database()
             formulario = web.input() 
             email = formulario.email 
-            password= formulario.password
+            password = formulario.password
             user = auth.sign_in_with_email_and_password(email, password) 
             tokens = user["idToken"]
-            local_id =  (user ['localId'])
+            local_id = user['localId']
             web.setcookie('localid', local_id)
-            web.setcookie('tokenUser', tokens)
-            busqueda =  db.child("data").child("usuarios").child(user['localId']).get()
-            if busqueda.val()['nivel'] == 'administrador' and busqueda.val()['status'] == "activo":
-                actividad = "Ingreso al sistema"
-                registro = {
-                    "actividad": actividad,
-                    "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                }
-                db.child("data").child("usuarios").child(user['localId']).child("logs").push(registro)
-                return web.seeother("/admin/lista-pozos")
-            elif busqueda.val()['nivel'] == "operador" and busqueda.val()['status'] == "activo":
-                actividad = "Ingreso al sistema"
-                registro = {
-                    "actividad": actividad,
-                    "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                }
-                db.child("data").child("usuarios").child(user['localId']).child("logs").push(registro)
-                return web.seeother("/operador/lista-pozos")
-            elif busqueda.val()['nivel'] == "informatica":
-                actividad = "Ingreso al sistema"
-                registro = {
-                    "actividad": actividad,
-                    "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                }
-                db.child("data").child("usuarios").child(user['localId']).child("logs").push(registro)
-                return web.seeother("/informatica/agregar-usuario")
+            web.setcookie('tokenUser', tokens) 
+
+            # Aquí se puede agregar la lógica para redirigir según el tipo de usuario (empleador o migrante)
+            if  vce(local_id):
+                return web.seeother("/empleador/dashboard")
+            elif vcm(local_id):
+                return web.seeother("/migrante/dashboard")
             else:
-                mensaje = "Usuario inactivo"
-                return render.login(mensaje)
-                    
-        except Exception as error: # Error en formato JSON
+                # Si no es ni empleador ni migrante, redirecciona a una página por defecto o muestra un mensaje de error
+                return render.error_page("No tiene acceso como empleador ni como migrante.")
+         
+        except Exception as error:
             formato = json.loads(error.args[1])
             error = formato['error']
             mensaje = error['message']
+            
             if mensaje == "EMAIL_NOT_FOUND":
                 mensaje = "Correo no encontrado"
-                return render.login(mensaje) 
             elif mensaje == "INVALID_PASSWORD":
                 mensaje = "Contraseña incorrecta"
-                return render.login(mensaje)
+            
+            return render.login()
+
+

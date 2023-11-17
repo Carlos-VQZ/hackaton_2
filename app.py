@@ -2,6 +2,11 @@ import web
 
 urls = (
     '/', 'mvc.controllers.public.login.Login',
+    '/inicio', 'mvc.controllers.public.inicio.Inicio',
+    '/trabajador/registro', 'mvc.controllers.trabajador.registro.Registro',
+    '/empleador/registro_empleador', 'mvc.controllers.empleador.registro_empleador.Registro_empleador',
+    '/migrante/registro_migrante', 'mvc.controllers.migrante.registro_migrante.Registro_migrante',
+    '/empleador/home_empleador', 'mvc.controllers.migrante.home_empleador.Home_empleador',
     
 )
 

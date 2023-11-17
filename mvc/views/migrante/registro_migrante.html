@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/static/css/registro_migrante.css">
+</head>
+<body>
+
+<div class="container">
+    <center><img class="imagen_logo" src="img/Logo_Combita.png" alt="Logo"></center>
+    <hr>
+    <div class="heading-container">
+        <h1>Formulario de Registro para Migrante</h1>
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+    
+        <div class="group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="login-input" id="nombre" name="nombre" required>
+        </div>
+        <div class="group">
+            <label for="apellido">apellido:</label>
+            <input type="text" class="login-input" id="apellido" name="apellido" required>
+        </div>
+        
+        <div class="group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" class="login-input" id="telefono" name="telefono" required>
+        </div>
+        <div class="group">
+            <label for="correo">Correo:</label>
+            <input type="email" class="login-input" id="correo" name="correo" required>
+        </div>
+
+        <div class="group">
+            <label for="dob">Fecha:</label>
+            <input type="date" class="login-input" id="dob" name="dob" required>
+        </div>
+        <div class="group">
+            <label for="country">Pais:</label>
+            <select class="login-input" id="country" name="country" required>
+                <option value="">Selecciona el pais:</option>
+                <option value="country1">México</option>
+                <option value="country2">Argentina</option>
+                <option value="country3">Uruguay</option>
+                <option value="country4">Estados Unidos</option>
+                <option value="country5">Chile</option>
+                <option value="country6">Paraguay</option>
+                <option value="country7">Canadá</option>
+            </select>
+        </div>
+        <div class="group">
+            <label for="document">Subir documento:</label>
+            <input type="file" class="login-input" id="document" name="document" accept=".pdf,.doc,.docx" required>
+        </div>
+        <div class="group">
+            <label for="description">Descripción:</label>
+            <textarea class="login-input" id="description" name="description" rows="4" placeholder="Escribe aquí la descripción" required></textarea>
+        </div>
+        <div class="group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" class="login-input" id="contrasena" name="contrasena" required>
+        </div>
+
+        <button type="submit" class="btn">Registrarse</button>
+
+    </form>
+</div>
+
+</body>
+</html>
